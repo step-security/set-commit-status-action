@@ -1,0 +1,40 @@
+{
+  "name": "set-commit-status-action",
+  "version": "2.0.1",
+  "description": "GitHub action to update the status to the given commit",
+  "main": "lib/main.js",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "package": "npm run build && ncc build -o dist",
+    "test": "exit 0",
+    "all": "npm run build && npm run lint:fix && npm run package"
+  },
+  "keywords": [],
+  "author": "step-security",
+  "license": "MIT",
+  "devDependencies": {
+    "@myrotvorets/eslint-config-myrotvorets-ts": "^3.0.0",
+    "@octokit/webhooks-types": "^7.3.1",
+    "@types/node": "^24.0.0",
+    "@vercel/ncc": "^0.44.0",
+    "typescript": "^5.3.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/step-security/set-commit-status-action.git"
+  },
+  "bugs": {
+    "url": "https://github.com/step-security/set-commit-status-action/issues"
+  },
+  "homepage": "https://github.com/step-security/set-commit-status-action#readme",
+  "engines": {
+    "node": "24"
+  },
+  "dependencies": {
+    "@actions/core": "^2.0.0",
+    "@actions/github": "^7.0.0",
+    "axios": "^1.18.1"
+  }
+}
