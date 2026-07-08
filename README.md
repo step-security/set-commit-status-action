@@ -33,7 +33,7 @@ GitHub action to update the status for the given commit.
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Set final commit status
-        uses: step-security/set-commit-status-action@v1
+        uses: step-security/set-commit-status-action@v2
         if: always()
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
